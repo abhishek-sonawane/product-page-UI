@@ -1,19 +1,19 @@
 const arr = [
   {
-    bigImg: "../images/image-product-1.jpg",
-    thumbnail: "../images/image-product-1-thumbnail.jpg",
+    bigImg: "./images/image-product-1.jpg",
+    thumbnail: "./images/image-product-1-thumbnail.jpg",
   },
   {
-    bigImg: "../images/image-product-2.jpg",
-    thumbnail: "../images/image-product-2-thumbnail.jpg",
+    bigImg: "./images/image-product-2.jpg",
+    thumbnail: "./images/image-product-2-thumbnail.jpg",
   },
   {
-    bigImg: "../images/image-product-3.jpg",
-    thumbnail: "../images/image-product-3-thumbnail.jpg",
+    bigImg: "./images/image-product-3.jpg",
+    thumbnail: "./images/image-product-3-thumbnail.jpg",
   },
   {
-    bigImg: "../images/image-product-4.jpg",
-    thumbnail: "../images/image-product-4-thumbnail.jpg",
+    bigImg: "./images/image-product-4.jpg",
+    thumbnail: "./images/image-product-4-thumbnail.jpg",
   },
 ];
 
@@ -27,7 +27,9 @@ const counterDecrementbtn = document.querySelector("#counter-decrement");
 const counterIncrementbtn = document.querySelector("#counter-increment");
 
 counterDecrementbtn.addEventListener("click", () => {
-  counterBtn.value--;
+  if(counterBtn.value>1){
+    counterBtn.value--;
+  }
 
 //   console.log(counterValue);
 });
@@ -75,8 +77,9 @@ thumbnail.forEach((thum) => {
   //    console.log(thum.src)
   thum.addEventListener("click", (e) => {
     // var newse = thum.src.replace('-thumbnail','');
-    const trimmed = `..${thum.src.slice(21)}`;
-    console.log(trimmed);
+    const trimIndex = thum.src.indexOf('images') 
+    const trimmed = `./${thum.src.slice(trimIndex)}`;
+    console.log('this trimmed',trimmed);
     const th = arr.find((item) => {
       return item.thumbnail === trimmed;
     });
@@ -104,12 +107,12 @@ function addProdToCart() {
   document.querySelector(
     ".popup-cart"
   ).firstElementChild.innerHTML = `  <div class="cart-item">
-        <img width="50px" style="border-radius:7px;" src="../images/image-product-1-thumbnail.jpg" alt="">
+        <img width="50px" style="border-radius:7px;" src="./images/image-product-1-thumbnail.jpg" alt="">
         <div>
          <p>fall limited edition sneakers</p>
          <p>125$ x ${counterBtn.value}</p>
         </div>
-         <a class='deletebtn' href="#"><img src="../images/icon-delete.svg" alt=""> </a>
+         <a class='deletebtn' href="#"><img src="./images/icon-delete.svg" alt=""> </a>
      </div>
      <button  id="cart-btn">checkout</button>`;
 

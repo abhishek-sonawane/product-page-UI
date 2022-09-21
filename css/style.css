@@ -14,7 +14,9 @@
 .sneaker-comp {
   font-weight: 700;
 }
-
+.thumbnail{
+  cursor: pointer;
+}
 .popup-cart {
   padding: 2em;
   background-color: #fff;
