@@ -277,7 +277,9 @@
   top: 10px;
   right: 65px;
   padding: 10px;
-  background-color: #e2e2e2;
+  background-color: #ffffff;
+  -webkit-box-shadow: 1px 12px 18px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 12px 18px -4px rgba(0, 0, 0, 0.75);
   visibility: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -288,7 +290,7 @@
 .hamburger-lists > ul > li {
   list-style: none;
   padding: 10px;
-  font-family: "sf pro display";
+  font-family: "Kumbh sans", sans-serif;
   cursor: pointer;
 }
 
