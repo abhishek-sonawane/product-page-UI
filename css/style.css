@@ -14,7 +14,8 @@
 .sneaker-comp {
   font-weight: 700;
 }
-.thumbnail{
+.thumbnail,#counter-increment,#counter-decrement,.nav-second-sec
+{
   cursor: pointer;
 }
 .popup-cart {
@@ -305,6 +306,7 @@
   opacity: 0;
   z-index: 4;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .hamburger-item {
