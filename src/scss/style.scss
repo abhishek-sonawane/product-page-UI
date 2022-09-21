@@ -19,7 +19,7 @@ $lightish-grey: hsl(223, 64%, 98%);
   font-weight: 700;
 }
 
-.hi {
+.popup-cart {
   padding: 2em;
   background-color: #fff;
   position: absolute;
@@ -158,9 +158,7 @@ $lightish-grey: hsl(223, 64%, 98%);
       color: #fff;
       margin-inline: 10px;
     }
-    .cunt {
-      // flex-grow: 1;
-    }
+   
     .counter-wrapper {
       background-color: $lightish-grey;
       max-width: 30px;

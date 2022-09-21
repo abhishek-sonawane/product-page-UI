@@ -29,13 +29,13 @@ const counterIncrementbtn = document.querySelector("#counter-increment");
 counterDecrementbtn.addEventListener("click", () => {
   counterBtn.value--;
 
-  console.log(counterValue);
+//   console.log(counterValue);
 });
 
 counterIncrementbtn.addEventListener("click", () => {
   counterBtn.value++;
 
-  console.log(counterValue);
+//   console.log(counterValue);
 });
 
 let i = 0;
@@ -88,21 +88,21 @@ thumbnail.forEach((thum) => {
 });
 
 function toggleCart() {
-  document.querySelector(".hi").classList.toggle("hidden");
+  document.querySelector(".popup-cart").classList.toggle("hidden");
   if (
     !document
-      .querySelector(".hi")
+      .querySelector(".popup-cart")
       .firstElementChild.classList.contains("conditional")
   ) {
-    document.querySelector(".hi").firstElementChild.innerHTML =
+    document.querySelector(".popup-cart").firstElementChild.innerHTML =
       "your cart is empty";
   }
 }
 
 function addProdToCart() {
-  document.querySelector(".hi").firstElementChild.classList.add("conditional");
+  document.querySelector(".popup-cart").firstElementChild.classList.add("conditional");
   document.querySelector(
-    ".hi"
+    ".popup-cart"
   ).firstElementChild.innerHTML = `  <div class="cart-item">
         <img width="50px" style="border-radius:7px;" src="../images/image-product-1-thumbnail.jpg" alt="">
         <div>
@@ -115,7 +115,7 @@ function addProdToCart() {
 
   document.querySelector(".deletebtn").addEventListener("click", () => {
     console.log("delet");
-    document.querySelector(".hi").firstElementChild.innerHTML = "";
+    document.querySelector(".popup-cart").firstElementChild.innerHTML = "your cart is empty";
   });
 }
 
