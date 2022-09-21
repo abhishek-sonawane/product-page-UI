@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$light-grey: hsl(219, 9%, 45%);
+$orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+$lightish-grey: hsl(223, 64%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh sans", sans-serif;
+}
+
+.orange {
+  color: $orange;
+}
+.sneaker-comp {
+  font-weight: 700;
+}
+
+.hi {
+  padding: 2em;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  max-width: fit-content;
+  top: 7em;
+  right: 10px;
+  -webkit-box-shadow: 1px 12px 18px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 12px 18px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 12px 18px -4px rgba(0, 0, 0, 0.75);
+
+  #cart-btn {
+    padding: 8px 40px;
+    border-radius: 7px;
+    border: transparent;
+    background-color: $orange;
+    color: #fff;
+    // margin-inline: 10px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1em 0;
+
+  .usr-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .nav-first-sec {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+  }
+  .nav-linkscont {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+
+    .nav-links {
+      color: $light-grey;
+    }
+  }
+}
+
+// hero section coding
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 4em 0.5em;
+}
+
+.hero-section > div {
+  width: 100%;
+  max-width: 30em;
+}
+
+.product-img-gallery {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 2em;
+  max-width: 45%;
+
+  .main-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    img {
+      max-width: 60%;
+      border-radius: 7px;
+    }
+  }
+
+  .img-carousel {
+    img {
+      width: 15%;
+      margin-top: 0.4em;
+      margin-inline: 0.4em;
+      border-radius: 7px;
+      position: relative;
+      transition: all 100ms ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.product-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  // width: 45%;
+  * {
+    max-width: 400px;
+  }
+
+  .prod-info {
+    color: $light-grey;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  .btn-sec {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    #cart-btn {
+      flex-grow: 1;
+      padding: 10px 50px;
+      border-radius: 7px;
+      border: transparent;
+      background-color: $orange;
+      color: #fff;
+      margin-inline: 10px;
+    }
+    .cunt {
+      // flex-grow: 1;
+    }
+    .counter-wrapper {
+      background-color: $lightish-grey;
+      max-width: 30px;
+      height: 50px;
+      padding: 8px;
+      border-radius: 7px;
+
+      input {
+        max-width: 40px;
+        padding-left: 20px;
+        border: transparent;
+        background-color: $lightish-grey;
+      }
+      span {
+        padding-inline: 10px;
+      }
+    }
+  }
+}
+
+.prod-price-cont {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  max-width: 8em;
+
+  .disc-price {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .discount {
+    padding: 4px 8px;
+    height: fit-content;
+    background-color: $pale-orange;
+    font-weight: 700;
+  }
+  .org-price {
+    color: $light-grey;
+    text-decoration: line-through;
+  }
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 20px 0;
+  * {
+    padding-inline: 5px;
+  }
+}
+
+// hanburger  shidd
+
+.hamburger-container {
+  display: none;
+}
+
+.hamburger-lists {
+  position: fixed;
+  top: 10px;
+  right: 65px;
+  padding: 10px;
+  background-color: #e2e2e2;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 300ms ease-in-out;
+}
+
+.hamburger-lists > ul > li {
+  list-style: none;
+  padding: 10px;
+  font-family: "sf pro display";
+  cursor: pointer;
+}
+
+#hamburger-menu {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+.hamburger-item {
+  position: fixed;
+  top: 8px;
+  left: 9px;
+  z-index: 1;
+  width: 36px;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-item > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  transition: all 200ms ease-in-out;
+}
+
+.hamburger-item > div::before,
+.hamburger-item > div::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 100%;
+  height: 5px;
+  background-color: inherit;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+.hamburger-item > div::after {
+  top: 10px;
+}
+
+.hamburger-container #hamburger-menu:checked + .hamburger-item > div {
+  transform: rotate(135deg);
+}
+
+.hamburger-container #hamburger-menu:checked + .hamburger-item > div:before,
+.hamburger-container #hamburger-menu:checked + .hamburger-item > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.hamburger-container #hamburger-menu:checked ~ .hamburger-lists {
+  visibility: visible;
+  transform: scale(1);
+}
+
+@media (max-width: 50em) {
+  .nav-first-sec .nav-linkscont {
+    display: none;
+  }
+  .hamburger-container {
+    display: block;
+  }
+}
