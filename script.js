@@ -47,7 +47,7 @@ function prevFunc() {
     i--;
     chang.src = arr[i].bigImg;
   }
-  console.log(i);
+//   console.log(i);
 }
 
 function nextFunc() {
@@ -56,7 +56,7 @@ function nextFunc() {
     i++;
     chang.src = arr[i].bigImg;
   }
-  console.log(i);
+//   console.log(i);
 }
 
 imggallbuttons.forEach((buton) => {
@@ -79,12 +79,12 @@ thumbnail.forEach((thum) => {
     // var newse = thum.src.replace('-thumbnail','');
     const trimIndex = thum.src.indexOf('images') 
     const trimmed = `./${thum.src.slice(trimIndex)}`;
-    console.log('this trimmed',trimmed);
+//     console.log('this trimmed',trimmed);
     const th = arr.find((item) => {
       return item.thumbnail === trimmed;
     });
     i = arr.indexOf(th);
-    console.log("the one in array is", th);
+//     console.log("the one in array is", th);
     // chang.src = newse
     chang.src = arr[i].bigImg;
   });
